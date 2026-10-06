@@ -1,0 +1,23 @@
+# Supabase CLI configuration (only the parts this project relies on).
+project_id = "cx-reply-assistant"
+
+[db]
+major_version = 17
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[auth]
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173"]
+# Demo accounts are created by `npm run seed:users`; public sign-up is off.
+enable_signup = false
+
+[auth.email]
+enable_signup = false
+
+[functions.generate-reply]
+# The function verifies the user itself via auth.getUser(), which works with
+# both legacy JWT secrets and the newer asymmetric signing keys.
+verify_jwt = false

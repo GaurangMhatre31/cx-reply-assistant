@@ -1,0 +1,19 @@
+node_modules
+dist
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+supabase/.temp
+supabase/.branches
+.vercel
+.claude
+
+# The assessment brief is marked "Private & Confidential" — keep it out of the public repo.
+*.pdf
+# Personal submission documents (uploaded via the Google Form, not published)
+docs/submission/
+# Scratch files
+tests/zz-*

@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 810" width="1400" height="810" font-family="Segoe UI, system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4f46e5"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+    <style>
+      .title { font-size: 22px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-size: 13px; fill: #475569; }
+      .group { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.2; }
+      .group-label { font-size: 12px; font-weight: 700; fill: #475569; letter-spacing: 0.06em; }
+      .box { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.2; }
+      .box-strong { fill: #eef2ff; stroke: #6366f1; stroke-width: 1.5; }
+      .box-data { fill: #ecfdf5; stroke: #10b981; stroke-width: 1.3; }
+      .box-ai { fill: #f5f3ff; stroke: #8b5cf6; stroke-width: 1.3; }
+      .box-warn { fill: #fff1f2; stroke: #f43f5e; stroke-width: 1.2; }
+      .box-queue { fill: #fffbeb; stroke: #f59e0b; stroke-width: 1.2; }
+      .h { font-size: 14px; font-weight: 700; fill: #0f172a; }
+      .t { font-size: 12px; fill: #334155; }
+      .s { font-size: 11px; fill: #64748b; }
+      .flow { stroke: #475569; stroke-width: 1.6; fill: none; marker-end: url(#arrow); }
+      .line { stroke: #475569; stroke-width: 1.6; fill: none; }
+      .flow-agent { stroke: #4f46e5; stroke-width: 1.6; fill: none; marker-end: url(#arrow-indigo); }
+      .flow-out { stroke: #059669; stroke-width: 1.6; fill: none; stroke-dasharray: 6 4; marker-end: url(#arrow-green); }
+      .label { font-size: 11px; fill: #334155; font-weight: 600; }
+      .step { fill: #0f172a; }
+      .step-text { font-size: 11px; font-weight: 700; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="810" fill="#ffffff"/>
+  <text x="30" y="36" class="title">Datastraw CX platform: AI-assisted replies at scale</text>
+  <text x="30" y="56" class="subtitle">500 brands · 5,000 agents · millions of messages · multiple channels. Brand isolation is enforced in the database (RLS + brand_id on every row), not only in application code.</text>
+
+  <!-- ============ Agent workspace (top) ============ -->
+  <rect x="20" y="74" width="1360" height="104" rx="12" class="group"/>
+  <text x="34" y="94" class="group-label">AGENT WORKSPACE</text>
+
+  <rect x="40" y="104" width="170" height="60" rx="10" class="box"/>
+  <text x="125" y="130" text-anchor="middle" class="h">5,000 CX agents</text>
+  <text x="125" y="148" text-anchor="middle" class="s">scoped to their brands</text>
+
+  <rect x="260" y="104" width="250" height="60" rx="10" class="box-strong"/>
+  <text x="385" y="128" text-anchor="middle" class="h">React agent app (CDN)</text>
+  <text x="385" y="146" text-anchor="middle" class="t">inbox · AI drafts · KB admin · analytics</text>
+
+  <rect x="560" y="104" width="400" height="60" rx="10" class="box-strong"/>
+  <text x="760" y="128" text-anchor="middle" class="h">Supabase API layer</text>
+  <text x="760" y="146" text-anchor="middle" class="t">PostgREST reads (RLS) · RPC writes · Edge Functions · Realtime</text>
+
+  <rect x="1010" y="104" width="350" height="60" rx="10" class="box-strong"/>
+  <text x="1185" y="128" text-anchor="middle" class="h">Supabase Auth</text>
+  <text x="1185" y="146" text-anchor="middle" class="t">SSO · JWT with org + brand memberships · MFA</text>
+
+  <path d="M210 134 H256" class="flow-agent"/>
+  <path d="M510 134 H556" class="flow-agent"/>
+  <path d="M960 134 H1006" class="flow-agent" stroke-dasharray="4 3"/>
+
+  <!-- ============ Channels ============ -->
+  <rect x="20" y="200" width="200" height="400" rx="12" class="group"/>
+  <text x="34" y="220" class="group-label">CHANNELS</text>
+  <rect x="36" y="234" width="168" height="48" rx="8" class="box"/>
+  <text x="120" y="256" text-anchor="middle" class="h">WhatsApp Cloud API</text>
+  <text x="120" y="272" text-anchor="middle" class="s">Meta webhooks</text>
+  <rect x="36" y="292" width="168" height="48" rx="8" class="box"/>
+  <text x="120" y="314" text-anchor="middle" class="h">Email</text>
+  <text x="120" y="330" text-anchor="middle" class="s">inbound parse webhook</text>
+  <rect x="36" y="350" width="168" height="48" rx="8" class="box"/>
+  <text x="120" y="372" text-anchor="middle" class="h">Web chat / Instagram</text>
+  <text x="120" y="388" text-anchor="middle" class="s">widget · Graph API</text>
+  <rect x="36" y="440" width="168" height="62" rx="8" class="box"/>
+  <text x="120" y="462" text-anchor="middle" class="h">Brand commerce</text>
+  <text x="120" y="478" text-anchor="middle" class="s">Shopify · OMS · logistics</text>
+  <text x="120" y="492" text-anchor="middle" class="s">order &amp; tracking APIs</text>
+
+  <!-- ============ Ingress ============ -->
+  <rect x="250" y="200" width="230" height="400" rx="12" class="group"/>
+  <text x="264" y="220" class="group-label">INGRESS (EDGE FUNCTIONS)</text>
+  <rect x="266" y="234" width="198" height="136" rx="8" class="box-strong"/>
+  <text x="365" y="256" text-anchor="middle" class="h">Webhook receiver</text>
+  <text x="280" y="280" class="t">1. verify provider signature</text>
+  <text x="280" y="298" class="t">2. dedupe on provider event id</text>
+  <text x="280" y="316" class="t">3. persist raw event</text>
+  <text x="280" y="334" class="t">4. enqueue, return 200 fast</text>
+  <text x="280" y="356" class="s">no business logic in the hot path</text>
+  <rect x="266" y="430" width="198" height="90" rx="8" class="box"/>
+  <text x="365" y="452" text-anchor="middle" class="h">Commerce adapters</text>
+  <text x="280" y="474" class="t">order / customer lookup</text>
+  <text x="280" y="492" class="t">timeout · cache · circuit breaker</text>
+  <text x="280" y="510" class="s">per-brand credentials in vault</text>
+
+  <!-- ============ Queues ============ -->
+  <rect x="510" y="200" width="200" height="400" rx="12" class="group"/>
+  <text x="524" y="220" class="group-label">QUEUES (PGMQ)</text>
+  <rect x="526" y="234" width="168" height="40" rx="8" class="box-queue"/>
+  <text x="610" y="259" text-anchor="middle" class="h">inbound.message</text>
+  <rect x="526" y="300" width="168" height="40" rx="8" class="box-queue"/>
+  <text x="610" y="325" text-anchor="middle" class="h">ai.draft</text>
+  <rect x="526" y="380" width="168" height="40" rx="8" class="box-queue"/>
+  <text x="610" y="405" text-anchor="middle" class="h">outbound.send</text>
+  <rect x="526" y="446" width="168" height="40" rx="8" class="box-queue"/>
+  <text x="610" y="471" text-anchor="middle" class="h">kb.index</text>
+  <rect x="526" y="512" width="168" height="62" rx="8" class="box-warn"/>
+  <text x="610" y="535" text-anchor="middle" class="h">Dead-letter queue</text>
+  <text x="610" y="552" text-anchor="middle" class="s">after N retries · alert</text>
+  <text x="610" y="566" text-anchor="middle" class="s">replay after a fix</text>
+
+  <!-- ============ Workers ============ -->
+  <rect x="740" y="200" width="250" height="400" rx="12" class="group"/>
+  <text x="754" y="220" class="group-label">WORKERS (STATELESS, AUTOSCALED)</text>
+  <rect x="756" y="234" width="218" height="58" rx="8" class="box"/>
+  <text x="865" y="255" text-anchor="middle" class="h">Conversation worker</text>
+  <text x="865" y="273" text-anchor="middle" class="t">brand ← channel account id</text>
+  <text x="865" y="287" text-anchor="middle" class="s">upsert thread · store message</text>
+  <rect x="756" y="300" width="218" height="72" rx="8" class="box-ai"/>
+  <text x="865" y="321" text-anchor="middle" class="h">AI draft worker</text>
+  <text x="865" y="339" text-anchor="middle" class="t">facts → retrieve → LLM → guardrails</text>
+  <text x="865" y="355" text-anchor="middle" class="s">draft + full audit row</text>
+  <text x="865" y="367" text-anchor="middle" class="s">skips when no reply needed</text>
+  <rect x="756" y="380" width="218" height="58" rx="8" class="box"/>
+  <text x="865" y="401" text-anchor="middle" class="h">Outbound sender</text>
+  <text x="865" y="419" text-anchor="middle" class="t">transactional outbox</text>
+  <text x="865" y="433" text-anchor="middle" class="s">idempotency key · retry + backoff</text>
+  <rect x="756" y="446" width="218" height="58" rx="8" class="box"/>
+  <text x="865" y="467" text-anchor="middle" class="h">KB indexer</text>
+  <text x="865" y="485" text-anchor="middle" class="t">chunk · embed · upsert vectors</text>
+  <text x="865" y="499" text-anchor="middle" class="s">triggered by KB edits</text>
+  <rect x="756" y="512" width="218" height="62" rx="8" class="box"/>
+  <text x="865" y="533" text-anchor="middle" class="h">Schedulers</text>
+  <text x="865" y="551" text-anchor="middle" class="t">SLA timers · stuck-job sweeper</text>
+  <text x="865" y="565" text-anchor="middle" class="s">nightly eval run · cost report</text>
+
+  <!-- ============ Data & AI ============ -->
+  <rect x="1020" y="200" width="360" height="400" rx="12" class="group"/>
+  <text x="1034" y="220" class="group-label">DATA &amp; AI</text>
+  <rect x="1036" y="234" width="328" height="112" rx="8" class="box-data"/>
+  <text x="1200" y="256" text-anchor="middle" class="h">Postgres (Supabase)</text>
+  <text x="1050" y="278" class="t">brand_id on every row · RLS · composite FKs</text>
+  <text x="1050" y="296" class="t">messages partitioned by month</text>
+  <text x="1050" y="314" class="t">KB source of truth · AI audit log · outbox</text>
+  <text x="1050" y="332" class="s">PgBouncer pooling · read replica for analytics</text>
+  <rect x="1036" y="356" width="328" height="66" rx="8" class="box-data"/>
+  <text x="1200" y="378" text-anchor="middle" class="h">Qdrant</text>
+  <text x="1050" y="398" class="t">KB chunks · brand_id tenant index (mandatory filter)</text>
+  <text x="1050" y="414" class="s">hybrid: sparse (BM25) + dense, then rerank</text>
+  <rect x="1036" y="432" width="328" height="88" rx="8" class="box-ai"/>
+  <text x="1200" y="454" text-anchor="middle" class="h">LLM gateway</text>
+  <text x="1050" y="476" class="t">OpenRouter (chat) · DeepInfra (embeddings)</text>
+  <text x="1050" y="494" class="t">model routing · fallbacks · per-brand budgets</text>
+  <text x="1050" y="510" class="s">prompt caching · usage + cost metering</text>
+  <rect x="1036" y="530" width="328" height="44" rx="8" class="box-data"/>
+  <text x="1200" y="550" text-anchor="middle" class="h">Object storage</text>
+  <text x="1200" y="566" text-anchor="middle" class="s">attachments · photos of damaged items</text>
+
+  <!-- ============ Flows ============ -->
+  <!-- channels -> receiver -->
+  <path d="M204 258 H230 V300 H262" class="flow"/>
+  <path d="M204 316 H230" class="line"/>
+  <path d="M204 374 H230 V300" class="line"/>
+  <!-- commerce -> adapters -->
+  <path d="M204 471 H262" class="flow"/>
+  <!-- receiver -> inbound queue -->
+  <path d="M464 254 H522" class="flow"/>
+  <circle cx="493" cy="254" r="9" class="step"/><text x="493" y="258" text-anchor="middle" class="step-text">1</text>
+  <!-- inbound -> conversation worker -->
+  <path d="M694 254 H752" class="flow"/>
+  <circle cx="723" cy="254" r="9" class="step"/><text x="723" y="258" text-anchor="middle" class="step-text">2</text>
+  <!-- conversation worker -> ai.draft -->
+  <path d="M756 284 H730 V320 H698" class="flow"/>
+  <!-- ai.draft -> AI worker -->
+  <path d="M694 330 H752" class="flow"/>
+  <circle cx="723" cy="343" r="9" class="step"/><text x="723" y="347" text-anchor="middle" class="step-text">3</text>
+  <!-- worker -> data -->
+  <path d="M974 262 H1032" class="flow"/>
+  <path d="M974 324 H1004 V290 H1032" class="flow"/>
+  <path d="M974 336 H1010 V389 H1032" class="flow"/>
+  <path d="M974 350 H1016 V476 H1032" class="flow"/>
+  <!-- adapters used by workers -->
+  <path d="M464 475 H500 V585 H746 V362 H752" class="flow" stroke-dasharray="3 3"/>
+  <text x="520" y="597" class="s">order lookup (cached, with timeout)</text>
+  <!-- kb.index -> indexer -> qdrant/gateway -->
+  <path d="M694 466 H752" class="flow"/>
+  <path d="M974 470 H1022 V410 H1032" class="flow"/>
+  <!-- API layer -> Postgres -->
+  <path d="M900 164 V186 H1200 V230" class="flow-agent"/>
+  <text x="1010" y="182" class="label" fill="#4f46e5">reads via RLS · writes via RPC · Realtime push</text>
+  <!-- agent approve -> outbound -->
+  <path d="M640 164 V186 H500 V400 H522" class="flow-agent"/>
+  <circle cx="500" cy="300" r="9" fill="#4f46e5"/><text x="500" y="304" text-anchor="middle" class="step-text">4</text>
+  <text x="380" y="196" class="label" fill="#4f46e5">approve draft → outbox</text>
+  <!-- outbound -> sender -> channels -->
+  <path d="M694 400 H752" class="flow"/>
+  <path d="M756 428 H734 V616 H120 V506" class="flow-out"/>
+  <circle cx="500" cy="616" r="9" fill="#059669"/><text x="500" y="620" text-anchor="middle" class="step-text">5</text>
+  <text x="560" y="632" class="label" fill="#059669">reply delivered via channel API (idempotent; status webhooks update the message)</text>
+
+  <!-- ============ Cross-cutting ============ -->
+  <rect x="20" y="650" width="1360" height="146" rx="12" class="group"/>
+  <text x="34" y="670" class="group-label">CROSS-CUTTING</text>
+  <rect x="36" y="682" width="320" height="98" rx="8" class="box"/>
+  <text x="196" y="704" text-anchor="middle" class="h">Observability</text>
+  <text x="50" y="726" class="t">OpenTelemetry traces across webhook → reply</text>
+  <text x="50" y="744" class="t">queue depth / age, DLQ size, p95 latency alerts</text>
+  <text x="50" y="760" class="s">every log line carries brand_id + trace id</text>
+  <rect x="372" y="682" width="320" height="98" rx="8" class="box-ai"/>
+  <text x="532" y="704" text-anchor="middle" class="h">AI quality &amp; cost</text>
+  <text x="386" y="726" class="t">per-brand golden sets run on every prompt change</text>
+  <text x="386" y="744" class="t">online: approve-as-is rate, edit distance, flags</text>
+  <text x="386" y="760" class="s">tokens + ₹ per brand / feature / model, budgets</text>
+  <rect x="708" y="682" width="320" height="98" rx="8" class="box"/>
+  <text x="868" y="704" text-anchor="middle" class="h">Security</text>
+  <text x="722" y="726" class="t">service-role keys only in workers · secrets vault</text>
+  <text x="722" y="744" class="t">cross-tenant RLS tests in CI · audit trail</text>
+  <text x="722" y="760" class="s">PII redaction before logs and LLM telemetry</text>
+  <rect x="1044" y="682" width="320" height="98" rx="8" class="box"/>
+  <text x="1204" y="704" text-anchor="middle" class="h">Legend</text>
+  <path d="M1058 726 H1100" class="flow"/><text x="1108" y="730" class="t">system flow (async via queues)</text>
+  <path d="M1058 744 H1100" class="flow-agent"/><text x="1108" y="748" class="t">agent-initiated (sync API)</text>
+  <path d="M1058 762 H1100" class="flow-out"/><text x="1108" y="766" class="t">outbound reply</text>
+</svg>
